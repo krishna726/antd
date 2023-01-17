@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+// Antd Table styling
+.ant-table-wrapper {
+
+  table:hover,
+  tr:hover,
+  thead:hover {
+    background: none !important;
+  }
+
+  .ant-table-tbody>tr.ant-table-row:hover>td {
+    background: none !important;
+  }
+
+  .ant-table {
+    background-color: transparent;
+  }
+
+  .MainTableRow {
+    border-radius: 0;
+    tr {
+      :hover {
+        background-color: #ddd !important;
+      }
+    }
+    td {
+      &:hover {
+        background-color: #ddd !important;
+      }
+    }
+  }
+
+  .SubTableRow {
+    background-color: #ddd;
+    &:hover {
+      background-color: #ddd !important;
+      border-radius: 0px;
+    }
+    tr>td {
+      border: none !important;
+    }
+    td:first-child {
+      width: 50px;
+    }
+  }
+
+  .secondSubTableRow {
+    background-color: transparent;
+    td.ant-table-cell {
+      border: none !important;
+    }
+  }
+  .ant-table:not(.ant-table-bordered) .ant-table-tbody > tr > td {
+    background-color: transparent;
+  }
+
+}
+
+.ant-table-tbody > tr.ant-table-row-level-1:hover > td {
+  background: unset;
+}
+
+.SubTableRow {
+  border-left: 1px solid #ddd;
+}
+
+tr.SubTableRow:before {
+  content: "";
+  border-left: 1px solid #ddd;
+  z-index: -1;
+  position: absolute;
+  transform: rotate(90deg);
+  height: 40px;
+}
+tr.ant-table-expanded-row.ant-table-expanded-row-level-1 {
+  position: relative;
+}
+.SubTable {
+  table {
+    padding-left: 40px;
+  }
+}
+.ant-table-expanded-row .ant-table-expanded-row-level-1:before {
+  content: "";
+  background: #ddd;
+  position: absolute;
+  height: 135%;
+  left: -19.5px;
+  width: 1px;
+}
+
+tr.SubTableRow {
+  position: relative;
+}
+tr.SubTableRow:after {
+  content: "";
+  border-left: 1px solid #ddd;
+  position: absolute;
+  height: 100%;
+  left: -20px;
+  z-index: 0;
+}
+
+tr.ant-table-expanded-row.ant-table-expanded-row-level-1:last-child:before {
+  display: none;
+}
+
+.NPI-header {
+  display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 20px;
+    position: relative;
+    align-items: center;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      background-color: #ddd;
+      height: 1px;
+      display: block;
+    }
+    span {
+      width: 200px;
+      background: #fff;
+      z-index: 1;
+      text-align: center;
+      &:first-child {
+        text-align: left;
+        width: 60px;
+      }
+  }
+}
