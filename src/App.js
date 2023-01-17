@@ -60,13 +60,13 @@ function App() {
 
 
   const onTableRowExpand = (expanded, record) => {
+    console.log(expanded,'is expanded')
     const keys = [];
     if (expanded) {
       keys.push(record.id); // I have set my record.id as row key. Check the documentation for more details.
+      fetchData();
     }
-
     setExpandedRowKeys(keys);
-    fetchData();
   }
 
   return (
